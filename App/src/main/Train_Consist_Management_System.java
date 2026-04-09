@@ -3,7 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class UseCase1TrainConsist {
+public class Train_Consist_Management_System {
 
     public static void main(String[] args) {
         // Display welcome banner
