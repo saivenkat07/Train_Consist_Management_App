@@ -1,44 +1,32 @@
 package Main;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
-public class Train_Consist_Management_System {
+public class Train_Consist_Management_APP {
 
     public static void main(String[] args) {
 
-        System.out.println("=== UC2 - Add Passenger Bogies to Train ===");
+        System.out.println("=== UC3 - Unique Bogie ID Tracking ===");
         System.out.println();
 
-        // Create ArrayList
-        List<String> passengerBogies = new ArrayList<>();
+        // Create HashSet
+        Set<String> bogieIds = new HashSet<>();
 
-        // Adding bogies
-        passengerBogies.add("Sleeper");
-        passengerBogies.add("AC Chair");
-        passengerBogies.add("First Class");
+        // Adding bogie IDs (with duplicates)
+        bogieIds.add("BG101");
+        bogieIds.add("BG102");
+        bogieIds.add("BG103");
+        bogieIds.add("BG101"); // duplicate
+        bogieIds.add("BG102"); // duplicate
 
-        System.out.println("After Adding Bogies:");
-        System.out.println("Passenger Bogies : " + passengerBogies);
+        System.out.println("Bogie IDs after insertion (duplicates ignored):");
+        System.out.println(bogieIds);
         System.out.println();
 
-        // Removing a bogie
-        passengerBogies.remove("AC Chair");
-
-        System.out.println("After Removing 'AC Chair':");
-        System.out.println("Passenger Bogies : " + passengerBogies);
+        System.out.println("Total Unique Bogies : " + bogieIds.size());
         System.out.println();
 
-        // Checking existence
-        System.out.println("Checking if 'Sleeper' exists:");
-        System.out.println("Contains Sleeper? : " + passengerBogies.contains("Sleeper"));
-        System.out.println();
-
-        // Final state
-        System.out.println("Final Train Passenger Consist:");
-        System.out.println(passengerBogies);
-        System.out.println();
-
-        System.out.println("UC2 operations completed successfully...");
+        System.out.println("UC3 operations completed successfully...");
     }
 }
