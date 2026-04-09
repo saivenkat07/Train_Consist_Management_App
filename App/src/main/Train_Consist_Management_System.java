@@ -1,32 +1,43 @@
 package Main;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.LinkedList;
 
 public class Train_Consist_Management_System {
 
     public static void main(String[] args) {
 
-        System.out.println("=== UC3 - Unique Bogie ID Tracking ===");
+        System.out.println("=== UC4 - Maintain Ordered Bogie Consist ===");
         System.out.println();
 
-        // Create HashSet
-        Set<String> bogieIds = new HashSet<>();
+        // Create LinkedList
+        LinkedList<String> train = new LinkedList<>();
 
-        // Adding bogie IDs (with duplicates)
-        bogieIds.add("BG101");
-        bogieIds.add("BG102");
-        bogieIds.add("BG103");
-        bogieIds.add("BG101"); // duplicate
-        bogieIds.add("BG102"); // duplicate
+        // Add initial bogies
+        train.add("Engine");
+        train.add("Sleeper");
+        train.add("AC");
+        train.add("Cargo");
+        train.add("Guard");
 
-        System.out.println("Bogie IDs after insertion (duplicates ignored):");
-        System.out.println(bogieIds);
+        System.out.println("Initial Train Consist:");
+        System.out.println(train);
         System.out.println();
 
-        System.out.println("Total Unique Bogies : " + bogieIds.size());
+        // Insert Pantry Car at position 2
+        train.add(2, "Pantry Car");
+
+        System.out.println("After Inserting 'Pantry Car' at position 2:");
+        System.out.println(train);
         System.out.println();
 
-        System.out.println("UC3 operations completed successfully...");
+        // Remove first and last bogie
+        train.removeFirst();
+        train.removeLast();
+
+        System.out.println("After Removing First and Last Bogie:");
+        System.out.println(train);
+        System.out.println();
+
+        System.out.println("UC4 ordered consist operations completed...");
     }
 }
