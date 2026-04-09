@@ -3,7 +3,7 @@ package Main;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Train_Consist_Management_APP {
+public class Train_Consist_Management_System {
 
     public static void main(String[] args) {
 
